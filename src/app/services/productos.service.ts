@@ -8,13 +8,13 @@ export class ProductosService {
   producto_filtrado: any[] = [];
   cargando: boolean = true;
 
-  constructor(private http: Http) {
+  constructor(public http: Http) {
     this.cargar_productos();
   }
 
   public buscar_producto ( termino:string ){
-      console.log("Buscando producto");
-      console.log(this.productos.length);
+    //   console.log("Buscando producto");
+    //   console.log(this.productos.length);
 
       if(this.productos.length === 0){
           this.cargar_productos().then(()=>{
