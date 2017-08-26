@@ -23,7 +23,7 @@ export class InfoService {
   public carga_about(){
     this.http.get("https://paginamamalona.firebaseio.com/team.json")
               .subscribe ( data =>{
-                  console.log(data.json());
+                  // console.log(data.json());
                   this.equipo = data.json();
               })
   }
